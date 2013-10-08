@@ -25,10 +25,12 @@ Slide 2 text
  
 Why are these slides together??
  
---- .class #id
+---
 
 ## Slide 3
 
 blah.
+
+--- 
 
 
