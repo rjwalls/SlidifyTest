@@ -23,10 +23,14 @@ mode        : selfcontained # {standalone, draft}
 Slide 2 text
  - bullet?
  
+Why are these slides together??
+ 
 ---
 
 ## Slide 3
 
 blah.
+
+--- 
 
 
