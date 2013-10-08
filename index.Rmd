@@ -23,7 +23,7 @@ mode        : selfcontained # {standalone, draft}
 Slide 2 text
  - bullet?
  
----
+--- .class #id
 
 ## Slide 3
 
