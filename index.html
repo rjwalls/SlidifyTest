@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testing Slidify</title>
+  <title>Making Cool Presentations with Slidify</title>
   <meta charset="utf-8">
-  <meta name="description" content="Testing Slidify">
-  <meta name="author" content="Wallsr">
+  <meta name="description" content="Making Cool Presentations with Slidify">
+  <meta name="author" content="Robert J. Walls">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- Should I move this to a Local Layout File? -->
     <slide class="title-slide segue nobackground">
       <hgroup class="auto-fadein">
-        <h1>Testing Slidify</h1>
+        <h1>Making Cool Presentations with Slidify</h1>
         <h2></h2>
-        <p>Wallsr<br/>Not sure what I do around here</p>
+        <p>Robert J. Walls<br/>University of Massachusetts</p>
       </hgroup>
           </slide>
 
@@ -56,7 +56,7 @@
 
       <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Simple Code Blocks</h2>
   </hgroup>
   <article>
     <p>Slide 2 text</p>
@@ -67,22 +67,37 @@
 
 <p>Why are these slides together??</p>
 
-<hr>
-
-<h2>Slide 3</h2>
-
-<p>blah.</p>
-
   </article>
   <!-- Presenter Notes -->
 </slide>
 
       <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Another slide</h2>
+    <h2>Using ggplot</h2>
   </hgroup>
   <article>
-    <p>Write some more text here.</p>
+    <p>How do I center this plot?</p>
+
+<pre><code class="r">
+library(ggplot2)
+ggplot(diamonds, aes(carat, price)) + geom_hex()
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Equations</h2>
+  </hgroup>
+  <article>
+    <p>The Arithmetic mean is equal to \(\frac{1}{n} \sum_{i=i}^{n} x_{i}\), or the summation
+of n numbers divided by n.</p>
+
+<p>\[ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} \]</p>
 
   </article>
   <!-- Presenter Notes -->

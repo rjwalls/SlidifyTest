@@ -1,8 +1,8 @@
 ---
-title       : Testing Slidify 
+title       : Making Cool Presentations with Slidify 
 subtitle    : 
-author      : Wallsr
-job         : Not sure what I do around here
+author      : Robert J. Walls
+job         : University of Massachusetts
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -18,21 +18,34 @@ mode        : selfcontained # {standalone, draft}
 
 --- .class #id 
 
-## Slide 2
+## Simple Code Blocks
 
 Slide 2 text
  - bullet?
  
 Why are these slides together??
- 
----
-
-## Slide 3
-
-blah.
 
 ---
 
-## Another slide
+## Using ggplot
 
-Write some more text here.
+How do I center this plot?
+
+
+```r
+
+library(ggplot2)
+ggplot(diamonds, aes(carat, price)) + geom_hex()
+```
+
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
+
+
+
+---
+
+## Equations
+The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation
+of n numbers divided by n.
+
+$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
