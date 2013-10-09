@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Making Cool Presentations with Slidify</title>
+  <title>Slidify</title>
   <meta charset="utf-8">
-  <meta name="description" content="Making Cool Presentations with Slidify">
+  <meta name="description" content="Slidify">
   <meta name="author" content="Robert J. Walls">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,23 +32,19 @@
     <!-- Should I move this to a Local Layout File? -->
     <slide class="title-slide segue nobackground">
       <hgroup class="auto-fadein">
-        <h1>Making Cool Presentations with Slidify</h1>
-        <h2></h2>
+        <h1>Slidify</h1>
+        <h2>Great Presentations using R Markdown</h2>
         <p>Robert J. Walls<br/>University of Massachusetts</p>
       </hgroup>
           </slide>
 
     <!-- SLIDES -->
-      <slide class="" id="slide-1" style="background:;">
+      <slide class="seque quote dark" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    
   </hgroup>
   <article>
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <p><q> Who doesn&#39;t like to start out a presentation with a quote? </q></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,14 +72,13 @@
     <h2>Using ggplot</h2>
   </hgroup>
   <article>
-    <p>How do I center this plot?</p>
-
-<pre><code class="r">
-library(ggplot2)
+    <pre><code class="r">library(ggplot2)
 ggplot(diamonds, aes(carat, price)) + geom_hex()
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<p><img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
+<p>Use <code>echo=FALSE</code> to hide the code block on your slide.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -98,6 +93,122 @@ ggplot(diamonds, aes(carat, price)) + geom_hex()
 of n numbers divided by n.</p>
 
 <p>\[ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} \]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Python!</h2>
+  </hgroup>
+  <article>
+    <p>Use fenced code blocks to render Python code with syntax highlighting.</p>
+
+<pre><code class="python">def hello():
+  &#39;&#39;&#39;
+  Such a boring function
+  &#39;&#39;&#39;
+  print &#39;hi!&#39;
+
+if __name__ == &#39;__main__&#39;:
+  hello()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Getting Started with Slidify</h2>
+  </hgroup>
+  <article>
+    <p>You have to use Hadley&#39;s <code>devtools</code> package to download and install Slidify from Github.</p>
+
+<pre><code class="r">library(devtools)
+install_github(&#39;slidify&#39;, &#39;ramnathv&#39;)
+install_github(&#39;slidifyLibraries&#39;, &#39;ramnathv&#39;)
+</code></pre>
+
+<p>It is simple to create a new presentation.</p>
+
+<pre><code class="r">library(slidify)
+
+# Create a new presentation called &#39;mydeck&#39;
+author(&quot;mydeck&quot;)
+</code></pre>
+
+<p>Slidify does much of the setup work for you (including creating the github repo). 
+You just need to edit the <code>index.Rmd</code> file!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Publishing your Presentation</h2>
+  </hgroup>
+  <article>
+    <p>When you are ready to share your handiwork.</p>
+
+<pre><code class="r"># Generate the Deck
+slidify(&quot;index.Rmd&quot;)
+
+# Publish it to github
+publish(user = &quot;rjwalls&quot;, repo = &quot;SlidifyTest&quot;, host = &quot;github&quot;)
+</code></pre>
+
+<p>Puts the presentation at <a href="http://rjwalls.github.com/SlidifyTest">http://rjwalls.github.com/SlidifyTest</a>. Note that you need to setup your <a href="https://help.github.com/articles/generating-ssh-keys">Github SSH keys</a>.  </p>
+
+<p>Can also use Rpubs or Dropbox.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Slidify Philosophy</h2>
+  </hgroup>
+  <article>
+    <p>Separate the content writing from the its rendering.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>RMarkdown</h2>
+  </hgroup>
+  <article>
+    <p>You can use all of the features you love in Rmarkdown including:</p>
+
+<ul>
+<li>bullets</li>
+</ul>
+
+<p>As well as numbered lists:</p>
+
+<ol>
+<li>Thing 1</li>
+<li>Thing 2</li>
+</ol>
+
+<p><em>Italicized</em> and <strong>bold</strong> font. Or maybe not...</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>And of course, Kittens.</h2>
+  </hgroup>
+  <article>
+    <iframe src = 'http://kittenwar.com' height='600px'></iframe>
 
   </article>
   <!-- Presenter Notes -->

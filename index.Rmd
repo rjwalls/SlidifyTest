@@ -1,6 +1,6 @@
 ---
-title       : Making Cool Presentations with Slidify 
-subtitle    : 
+title       : Slidify 
+subtitle    : Great Presentations using R Markdown
 author      : Robert J. Walls
 job         : University of Massachusetts
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -8,13 +8,9 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
----
+--- .seque .quote .dark
 
-## Read-And-Delete
-
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+<q> Who doesn't like to start out a presentation with a quote? </q>
 
 --- .class #id 
 
@@ -25,19 +21,19 @@ Slide 2 text
  
 Why are these slides together??
 
+
 ---
+
 
 ## Using ggplot
 
-How do I center this plot?
-
-```{r, message=FALSE, fig.width=7, fig.height=5}
-
+```{r, message=FALSE, fig.width=7, fig.height=5, fig.align='center'}
 library(ggplot2)
 ggplot(diamonds, aes(carat, price)) + geom_hex()
 
 ```
 
+Use `echo=FALSE` to hide the code block on your slide.
 
 ---
 
@@ -46,3 +42,87 @@ The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summa
 of n numbers divided by n.
 
 $$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+
+---
+
+## Python!
+
+Use fenced code blocks to render Python code with syntax highlighting.
+
+```python
+def hello():
+  '''
+  Such a boring function
+  '''
+  print 'hi!'
+  
+if __name__ == '__main__':
+  hello()
+```
+
+---
+
+## Getting Started with Slidify
+
+You have to use Hadley's `devtools` package to download and install Slidify from Github.
+
+```r
+library(devtools)
+install_github('slidify', 'ramnathv')
+install_github('slidifyLibraries', 'ramnathv')
+```
+
+It is simple to create a new presentation.
+
+```{r, eval=FALSE}
+library(slidify)
+
+#Create a new presentation called 'mydeck'
+author('mydeck')
+```
+
+Slidify does much of the setup work for you (including creating the github repo). 
+You just need to edit the `index.Rmd` file!
+
+---
+
+## Publishing your Presentation
+
+When you are ready to share your handiwork.
+
+```{r, eval=FALSE}
+# Generate the Deck
+slidify('index.Rmd')
+
+# Publish it to github
+publish(user='rjwalls', repo='SlidifyTest', host='github')
+```
+
+Puts the presentation at <http://rjwalls.github.com/SlidifyTest>. Note that you need to setup your [Github SSH keys](https://help.github.com/articles/generating-ssh-keys).  
+
+Can also use Rpubs or Dropbox.
+
+---
+
+## Slidify Philosophy
+
+Separate the content writing from the its rendering.
+
+---
+
+## RMarkdown
+
+You can use all of the features you love in Rmarkdown including:
+ - bullets
+
+As well as numbered lists:
+ 1. Thing 1
+ 2. Thing 2
+ 
+*Italicized* and **bold** font. Or maybe not...
+
+---
+
+## And of course, Kittens.
+
+<iframe src = 'http://kittenwar.com' height='600px'></iframe>
