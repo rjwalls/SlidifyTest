@@ -1,0 +1,5 @@
+```{r echo=F, comment=NA, results='asis'}
+library(ggplot2)
+
+ggplot(diamonds, aes(carat, price)) + geom_smooth()
+```

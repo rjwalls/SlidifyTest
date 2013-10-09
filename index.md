@@ -10,6 +10,8 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 --- .seque .quote .dark
 
+
+
 <q> Who doesn't like to start out a presentation with a quote? </q>
 
 --- .class #id 
@@ -19,7 +21,9 @@ mode        : selfcontained # {standalone, draft}
 Slide 2 text
  - bullet?
  
-Why are these slides together??
+### Another title?
+
+Hello thar.
 
 
 ---
@@ -62,6 +66,10 @@ def hello():
 if __name__ == '__main__':
   hello()
 ```
+
+--- .seque .dark
+
+## Seque ##
 
 ---
 
@@ -128,8 +136,56 @@ As well as numbered lists:
  
 *Italicized* and **bold** font. Or maybe not...
 
+
 ---
 
-## And of course, Kittens.
+## IO2012
 
-<iframe src = 'http://kittenwar.com' height='600px'></iframe>
+Animated lists:
+> - Point 1
+> - Point 2
+> - Point 3
+
+---
+
+## Tables
+
+Column 1  | Column 2
+----------|---------
+Foo       | Bar
+Blah      | Blah
+Bing      | Bang
+
+
+--- #kittenwar
+
+<iframe src = 'http://dillinger.io' height='600px'></iframe>
+
+---
+
+
+## Useful Links
+ - [R Markdown Examples](https://gist.github.com/jeromyanglim/2716336)
+ - [Slidify](http://slidify.org/)
+
+---
+
+## Adding existing R files
+
+
+```r
+knit("figure1.Rmd")
+```
+
+```
+## 
+## 
+## processing file: figure1.Rmd output file: figure1.md
+```
+
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+
+
+---
+
+
