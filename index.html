@@ -58,10 +58,10 @@
   <article>
     <h3>An R package for Creating slides from R Markdown.</h3>
 
-<p><em>Slidify Philosophy</em>: Separate the content writing from the its rendering.</p>
+<p><img src="slidifylogo.png" alt="Slidify"></p>
 
 <div class='well'>
-<p><b> Note: </b> we can embed nodes using HTML (with the bootstrap widget)</p>
+<p><b>Philosophy: </b> Separate the content writing from the its rendering.</p>
 </div>
 
 
@@ -69,25 +69,7 @@
   <!-- Presenter Notes -->
   <aside class="note">
     <section>
-      <p>I need to focus on the following</p>
-
-<ul>
-<li>key point</li>
-<li>other key point</li>
-<li>clever anecdote</li>
-</ul>
-
-<hr>
-
-<h2>Using ggplot</h2>
-
-<pre><code class="r">library(ggplot2)
-ggplot(diamonds, aes(carat, price)) + geom_hex()
-</code></pre>
-
-<p><img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
-
-<p>Use <code>echo=FALSE</code> to hide the code block on your slide.</p>
+      <p>Presenter notes go here. </p>
 
     </section>
   </aside>
@@ -95,22 +77,22 @@ ggplot(diamonds, aes(carat, price)) + geom_hex()
 
       <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Equations</h2>
+    <h2>Making Slides</h2>
   </hgroup>
   <article>
-    <p>Write equations just like you would in LaTeX.</p>
+    <p>Uses R Markdown.</p>
 
-<p>The Arithmetic mean is equal to \(\frac{1}{n} \sum_{i=i}^{n} x_{i}\), or the summation
-of n numbers divided by n.</p>
+<p>Start a new slide with a blank line followed by three dashes (<code>---</code>).</p>
 
-<p>\[ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} \]</p>
+<pre><code class="r">---
 
-<pre><code>$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
-</code></pre>
+## Title
 
-<p>In the starting YAML, make sure to include </p>
+### Bigger text
 
-<pre><code>widgets : [mathjax]
+Basic text:
+ - Thing 1
+ - Thing 2
 </code></pre>
 
   </article>
@@ -119,75 +101,23 @@ of n numbers divided by n.</p>
 
       <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Syntax Highlighting</h2>
+    <h2>Title</h2>
   </hgroup>
   <article>
-    <p>Use fenced code blocks to render Python code with syntax highlighting.</p>
+    <h3>Big text</h3>
 
-<pre><code class="python">def hello():
-  &#39;&#39;&#39;
-  Such a boring function
-  &#39;&#39;&#39;
-  print &#39;hi!&#39;
+<p>Basic text:</p>
 
-if __name__ == &#39;__main__&#39;:
-  hello()
-</code></pre>
+<ol>
+<li>Thing 1</li>
+<li>Thing 2</li>
+</ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
       <slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Getting Started with Slidify</h2>
-  </hgroup>
-  <article>
-    <p>You have to use Hadley&#39;s <code>devtools</code> package to download and install Slidify from Github.</p>
-
-<pre><code class="r">library(devtools)
-install_github(&#39;slidify&#39;, &#39;ramnathv&#39;)
-install_github(&#39;slidifyLibraries&#39;, &#39;ramnathv&#39;)
-</code></pre>
-
-<p>It is simple to create a new presentation.</p>
-
-<pre><code class="r">library(slidify)
-
-#Create a new presentation called &#39;mydeck&#39;
-author(&#39;mydeck&#39;)
-</code></pre>
-
-<p>Slidify does much of the setup work for you (including creating the github repo). 
-You just need to edit the <code>index.Rmd</code> file!</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Publishing your Presentation</h2>
-  </hgroup>
-  <article>
-    <p>When you are ready to share your handiwork.</p>
-
-<pre><code class="r"># Generate the Deck
-slidify(&#39;index.Rmd&#39;)
-
-# Publish it to github
-publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39;)
-</code></pre>
-
-<p>Puts the presentation at <a href="http://rjwalls.github.com/SlidifyTest">http://rjwalls.github.com/SlidifyTest</a>. Note that you need to setup your <a href="https://help.github.com/articles/generating-ssh-keys">Github SSH keys</a>.  </p>
-
-<p>Can also use Rpubs or Dropbox.</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-6" style="background:;">
   <hgroup>
     <h2>R Markdown</h2>
   </hgroup>
@@ -196,6 +126,7 @@ publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39
 
 <ul>
 <li>bullets</li>
+<li><em>Italicized</em> and <strong>bold</strong> font.</li>
 </ul>
 
 <h3>As well as numbered lists:</h3>
@@ -212,90 +143,11 @@ publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39
 <li>Point 2</li>
 </ul>
 
-<p><em>Italicized</em> and <strong>bold</strong> font.</p>
-
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-7" style="background:;">
-  <hgroup>
-    <h2>IO2012</h2>
-  </hgroup>
-  <article>
-    <p>The default slide framework is <code>io2012</code> from Google&#39;s 2012 I/O developer conference.</p>
-
-<p>Adds some nice presenter features</p>
-
-<ul>
-<li>Pressing &#39;h&#39; highlights code snippets</li>
-<li>Pressing &#39;p&#39; toggles speaker notes (if they&#39;re on the current slide)</li>
-<li>Pressing &#39;f&#39; toggles fullscreen viewing</li>
-<li>Pressing &#39;w&#39; toggles widescreen</li>
-<li>Pressing &#39;o&#39; toggles overview mode</li>
-<li>Pressing &#39;ESC&#39; toggles off these goodies</li>
-</ul>
-
-<p>Append <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=true</code></a> to the presentation url to get the presenter view. Use <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=false</code></a> to disable presenter mode.</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-8" style="background:;">
-  <hgroup>
-    
-  </hgroup>
-  <article>
-    <p>Slide level metadata are specified as key:value pairs. 
-Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and &amp; respectively. </p>
-
-<pre><code>--- &amp;vcenter
-</code></pre>
-
-<pre><code>--- .segue .dark
-</code></pre>
-
-<pre><code>--- .segue .quote .dark, bg:url(allyourbase.jpg)
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-9">
-<hgroup>
-  
-</hgroup>
-<article class = 'flexbox vcenter'>
-<p><img src="limecat.jpg" alt="Lime cat">
-Lime cat is important.</p>
-
-</article>
-<!-- Presenter Notes -->
-</slide>
-      <slide class="segue dark" id="slide-10" style="background:;">
-  <hgroup>
-    <h2>Segue Slide</h2>
-  </hgroup>
-  <article>
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="segue quote dark," id="slide-11" style="background:url(allyourbase.jpg);">
-  <hgroup>
-    
-  </hgroup>
-  <article>
-    <p><q> All your base are belong to us. </q></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-12" style="background:;">
+      <slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Tables</h2>
   </hgroup>
@@ -320,16 +172,48 @@ Lime cat is important.</p>
 </tr>
 </tbody></table>
 
+<pre><code class="markdown">Column 1  | Column 2
+----------|---------
+Foo       | Bar
+Blah      | Blah
+Bing      | Bang
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-13" style="background:;">
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Front Matter</h2>
+  </hgroup>
+  <article>
+    <p>Every deck starts with YAML to specify the basics.</p>
+
+<pre><code class="yaml">title       : Slidify 
+subtitle    : Presentations from R Markdown
+author      : Robert J. Walls
+job         : University of Massachusetts
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+biglogo     : robertsrobot.png
+logo        : umass.png
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
   <hgroup>
     <h2>Tables from a Data.frame</h2>
   </hgroup>
   <article>
     <pre><code class="r">library(plyr)
+library(ggplot2)
 
 df &lt;- diamonds[seq(1, 5), ]
 df &lt;- with(df, cbind(price, carat, cut, clarity))
@@ -342,11 +226,13 @@ dashline &lt;- paste(rep(c(&quot;---&quot;), length(colnames(df))), collapse = &
 data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
 </code></pre>
 
+<h3>It is actually running this code.</h3>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-14" style="background:;">
+      <slide class="" id="slide-8" style="background:;">
   <hgroup>
     <h2>Tables from a Data.frame</h2>
   </hgroup>
@@ -400,9 +286,127 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-15" style="background:url(successkid.jpg);">
+      <slide class="" id="slide-9" style="background:;">
   <hgroup>
-    <h2>Slide with a Background Image</h2>
+    <h2>ggplot2</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">library(ggplot2)
+ggplot(diamonds, aes(carat, price)) + geom_hex()
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-3.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /></p>
+
+<p>Use <code>echo=FALSE</code> to hide the code block on your slide.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Equations</h2>
+  </hgroup>
+  <article>
+    <h3>Write equations like you would in LaTeX.</h3>
+
+<p>Equations can be written inline, \(\frac{1}{n} \sum_{i=i}^{n} x_{i}\), such as this. Or if you want to get fancy:</p>
+
+<p>\[ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} \]</p>
+
+<pre><code>$\frac{1}{n} \sum_{i=i}^{n} x_{i}$
+$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+</code></pre>
+
+<p>In the starting YAML, make sure to include </p>
+
+<pre><code>widgets : [mathjax]
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Syntax Highlighting</h2>
+  </hgroup>
+  <article>
+    <p>Use fenced code blocks to render code with syntax highlighting.</p>
+
+<blockquote>
+<pre><code>```python
+...CODE!
+```
+</code></pre>
+</blockquote>
+
+<pre><code class="python">def hello():
+  &#39;&#39;&#39;
+  Such a boring function
+  &#39;&#39;&#39;
+  print &#39;hi!&#39;
+
+if __name__ == &#39;__main__&#39;:
+  hello()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Getting Started</h2>
+  </hgroup>
+  <article>
+    <p>You have to use Hadley&#39;s <code>devtools</code> package to download and install Slidify from Github.</p>
+
+<pre><code class="r">library(devtools)
+install_github(&#39;slidify&#39;, &#39;ramnathv&#39;)
+install_github(&#39;slidifyLibraries&#39;, &#39;ramnathv&#39;)
+</code></pre>
+
+<p>It is simple to create a new presentation.</p>
+
+<pre><code class="r">library(slidify)
+
+#Create a new presentation called &#39;mydeck&#39;
+author(&#39;mydeck&#39;)
+</code></pre>
+
+<p>Slidify does the setup work for you (including creating the github repo). 
+You just need to edit the <code>index.Rmd</code> file!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Publishing</h2>
+  </hgroup>
+  <article>
+    <p>Sharing your handiwork is easy.</p>
+
+<pre><code class="r"># Generate the Deck
+slidify(&#39;index.Rmd&#39;)
+
+# Publish it to github
+publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39;)
+</code></pre>
+
+<p>Puts the presentation at <a href="http://rjwalls.github.com/SlidifyTest">http://rjwalls.github.com/SlidifyTest</a>. Note that you need to setup your <a href="https://help.github.com/articles/generating-ssh-keys">Github SSH keys</a>.  </p>
+
+<p>Can also use Rpubs or Dropbox.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue dark" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Where&#39;s the magic?</h2>
   </hgroup>
   <article>
     
@@ -410,12 +414,121 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
   <!-- Presenter Notes -->
 </slide>
 
+      <slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <pre><code class="yaml">title       : Slidify 
+subtitle    : Presentations from R Markdown
+author      : Robert J. Walls
+job         : University of Massachusetts
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+biglogo     : robertsrobot.png
+logo        : umass.png
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
       <slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>IO2012</h2>
+  </hgroup>
+  <article>
+    <p>The default slide framework is <code>io2012</code> from Google&#39;s 2012 I/O developer conference.</p>
+
+<p>Adds some nice presenter features</p>
+
+<ul>
+<li>Pressing &#39;p&#39; toggles speaker notes (if they&#39;re on the current slide ((buggy)))</li>
+<li>Pressing &#39;f&#39; toggles fullscreen viewing</li>
+<li>Pressing &#39;w&#39; toggles widescreen</li>
+<li>Pressing &#39;o&#39; toggles overview mode</li>
+<li>Pressing &#39;ESC&#39; toggles off these goodies</li>
+</ul>
+
+<p>Append <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=true</code></a> to the presentation url to get the presenter view. Use <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=false</code></a> to disable presenter mode.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Slide Metadata</h2>
+  </hgroup>
+  <article>
+    <p>Slide level metadata are specified as key:value pairs. 
+Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and &amp; respectively. </p>
+
+<pre><code>--- &amp;vcenter
+</code></pre>
+
+<pre><code>--- .segue .dark
+</code></pre>
+
+<pre><code>--- .segue .quote .dark, bg:url(allyourbase.jpg)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-18">
+<hgroup>
+  
+</hgroup>
+<article class = 'flexbox vcenter'>
+<pre><code>--- &amp;vcenter
+</code></pre>
+
+<p><img src="limecat.jpg" alt="Lime cat"></p>
+
+<p>Lime cat is important.</p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+      <slide class="segue dark" id="slide-19" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <pre><code>--- .segue .dark
+</code></pre>
+
+<h2>Segue Slide</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue quote dark," id="slide-20" style="background:url(allyourbase.jpg);">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <pre><code>--- .segue .quote .dark, bg:url(allyourbase.jpg)
+</code></pre>
+
+<p><q> All your base are belong to us. </q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Two Column Layout</h2>
   </hgroup>
   <article>
-    <h3>This slide <em>does not</em> have two columns</h3>
+    <h3>This slide <em>does not</em> have two columns, but it should.</h3>
 
 
 <div style='float:left;width:48%;' class='centered'>
@@ -428,17 +541,39 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-17" style="background:;">
+      <slide class="segue" id="slide-22" style="background:url(successkid.jpg);">
   <hgroup>
-    <h2>Useful Links</h2>
+    
   </hgroup>
   <article>
-    <ul>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Verdict</h2>
+  </hgroup>
+  <article>
+    <p>Quick and easy way to create presentations, <em>but</em> it&#39;s not quite ready to replace Keynote.</p>
+
+<p>Lacking:</p>
+
+<ul>
+<li>Animations</li>
+<li>Presenter View</li>
+<li>Spellcheck</li>
+</ul>
+
+<h3>Useful Links</h3>
+
+<ul>
 <li><a href="https://gist.github.com/jeromyanglim/2716336">R Markdown Examples</a></li>
-<li><a href="http://slidify.org/">Slidify</a></li>
+<li><a href="http://slidify.org/">Slidify Homepage</a></li>
 <li><a href="https://code.google.com/p/io-2012-slides/">I/O 2012 Template</a></li>
-<li><a href="http://slidify.github.io/iquiz/">iquiz</a></li>
-<li><a href="https://github.com/ramnathv/">Ramnath Vaidyanathan</a></li>
+<li><a href="http://slidify.github.io/iquiz/">iquiz: A quiz widget for slidify</a></li>
+<li><a href="https://github.com/ramnathv/">Ramnath Vaidyanathan&#39;s Github page</a></li>
 </ul>
 
   </article>

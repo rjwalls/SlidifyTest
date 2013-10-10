@@ -16,112 +16,46 @@ logo        : umass.png
 
 ### An R package for Creating slides from R Markdown.
 
-*Slidify Philosophy*: Separate the content writing from the its rendering.
+![Slidify](slidifylogo.png)
 
 <div class='well'>
-<p><b> Note: </b> we can embed nodes using HTML (with the bootstrap widget)</p>
+<p><b>Philosophy: </b> Separate the content writing from the its rendering.</p>
 </div>
 
 *** pnotes
 
-I need to focus on the following
- - key point
- - other key point
- - clever anecdote
- 
+Presenter notes go here. 
+
+
 ---
 
+## Making Slides
 
-## Using ggplot
+Uses R Markdown.
 
+Start a new slide with a blank line followed by three dashes (`---`).
 
 ```r
-library(ggplot2)
-ggplot(diamonds, aes(carat, price)) + geom_hex()
-```
-
-<img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
-
-
-Use `echo=FALSE` to hide the code block on your slide.
-
 ---
 
-## Equations
-Write equations just like you would in LaTeX.
+## Title
 
-The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation
-of n numbers divided by n.
+### Bigger text
 
-$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
-
-```
-$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
-```
-In the starting YAML, make sure to include 
-
-```
-widgets : [mathjax]
+Basic text:
+ - Thing 1
+ - Thing 2
 ```
 
 ---
 
-## Syntax Highlighting
+## Title
 
-Use fenced code blocks to render Python code with syntax highlighting.
+### Big text
 
-```python
-def hello():
-  '''
-  Such a boring function
-  '''
-  print 'hi!'
-  
-if __name__ == '__main__':
-  hello()
-```
-
----
-
-## Getting Started with Slidify
-
-You have to use Hadley's `devtools` package to download and install Slidify from Github.
-
-```r
-library(devtools)
-install_github('slidify', 'ramnathv')
-install_github('slidifyLibraries', 'ramnathv')
-```
-
-It is simple to create a new presentation.
-
-```r
-library(slidify)
-
-#Create a new presentation called 'mydeck'
-author('mydeck')
-```
-
-Slidify does much of the setup work for you (including creating the github repo). 
-You just need to edit the `index.Rmd` file!
-
----
-
-## Publishing your Presentation
-
-When you are ready to share your handiwork.
-
-```r
-# Generate the Deck
-slidify('index.Rmd')
-
-# Publish it to github
-publish(user='rjwalls', repo='SlidifyTest', host='github')
-```
-
-Puts the presentation at <http://rjwalls.github.com/SlidifyTest>. Note that you need to setup your [Github SSH keys](https://help.github.com/articles/generating-ssh-keys).  
-
-Can also use Rpubs or Dropbox.
+Basic text:
+ 1. Thing 1
+ 2. Thing 2
 
 ---
 
@@ -129,6 +63,7 @@ Can also use Rpubs or Dropbox.
 
 ### You can use all of the features you love in Rmarkdown including:
  - bullets
+ - *Italicized* and **bold** font.
 
 ### As well as numbered lists:
  1. Thing 1
@@ -137,54 +72,6 @@ Can also use Rpubs or Dropbox.
 ### Animated lists:
 > - This is probably specific to IO2012
 > - Point 2
- 
-*Italicized* and **bold** font.
-
----
-
-## IO2012 
-
-The default slide framework is `io2012` from Google's 2012 I/O developer conference.
-
-Adds some nice presenter features
- - Pressing 'h' highlights code snippets
- - Pressing 'p' toggles speaker notes (if they're on the current slide)
- - Pressing 'f' toggles fullscreen viewing
- - Pressing 'w' toggles widescreen
- - Pressing 'o' toggles overview mode
- - Pressing 'ESC' toggles off these goodies
- 
-Append [`?presentme=true`](http://rjwalls.github.io/SlidifyTest/) to the presentation url to get the presenter view. Use [`?presentme=false`](http://rjwalls.github.io/SlidifyTest/) to disable presenter mode.
-
----
-
-Slide level metadata are specified as key:value pairs. 
-Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and & respectively. 
-
-```
---- &vcenter
-```
-
-```
---- .segue .dark
-```
-
-```
---- .segue .quote .dark, bg:url(allyourbase.jpg)
-```
-
---- &vcenter
-
-![Lime cat](limecat.jpg)
-Lime cat is important.
-
---- .segue .dark
-
-## Segue Slide
-
---- .segue .quote .dark, bg:url(allyourbase.jpg)
-
-<q> All your base are belong to us. </q>
 
 ---
 
@@ -196,6 +83,34 @@ Foo       | Bar
 Blah      | Blah
 Bing      | Bang
 
+```markdown
+Column 1  | Column 2
+----------|---------
+Foo       | Bar
+Blah      | Blah
+Bing      | Bang
+```
+
+---
+
+## Front Matter
+
+Every deck starts with YAML to specify the basics.
+
+```yaml
+title       : Slidify 
+subtitle    : Presentations from R Markdown
+author      : Robert J. Walls
+job         : University of Massachusetts
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+biglogo     : robertsrobot.png
+logo        : umass.png
+```
+
 
 ---
 
@@ -204,6 +119,7 @@ Bing      | Bang
 
 ```r
 library(plyr)
+library(ggplot2)
 
 df <- diamonds[seq(1, 5), ]
 df <- with(df, cbind(price, carat, cut, clarity))
@@ -216,6 +132,8 @@ dashline <- paste(rep(c("---"), length(colnames(df))), collapse = " | ")
 data <- aaply(df, 1, paste, collapse = " | ")
 ```
 
+
+### It is actually running this code.
 
 ---
 
@@ -237,14 +155,190 @@ price | carat | cut | clarity
 
 Make sure to set `results='asis'`.
 
---- bg:url(successkid.jpg)
 
-## Slide with a Background Image 
+---
+
+## ggplot2
+
+
+```r
+library(ggplot2)
+ggplot(diamonds, aes(carat, price)) + geom_hex()
+```
+
+<img src="figure/unnamed-chunk-3.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+
+
+Use `echo=FALSE` to hide the code block on your slide.
+
+---
+
+## Equations
+### Write equations like you would in LaTeX.
+
+Equations can be written inline, $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, such as this. Or if you want to get fancy:
+
+$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+
+```
+$\frac{1}{n} \sum_{i=i}^{n} x_{i}$
+$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+```
+In the starting YAML, make sure to include 
+
+```
+widgets : [mathjax]
+```
+
+---
+
+## Syntax Highlighting
+
+Use fenced code blocks to render code with syntax highlighting.
+
+>     ```python
+>     ...CODE!
+>     ```
+
+
+```python
+def hello():
+  '''
+  Such a boring function
+  '''
+  print 'hi!'
+  
+if __name__ == '__main__':
+  hello()
+```
+
+---
+
+## Getting Started
+
+You have to use Hadley's `devtools` package to download and install Slidify from Github.
+
+```r
+library(devtools)
+install_github('slidify', 'ramnathv')
+install_github('slidifyLibraries', 'ramnathv')
+```
+
+It is simple to create a new presentation.
+
+```r
+library(slidify)
+
+#Create a new presentation called 'mydeck'
+author('mydeck')
+```
+
+Slidify does the setup work for you (including creating the github repo). 
+You just need to edit the `index.Rmd` file!
+
+
+---
+
+## Publishing
+
+Sharing your handiwork is easy.
+
+```r
+# Generate the Deck
+slidify('index.Rmd')
+
+# Publish it to github
+publish(user='rjwalls', repo='SlidifyTest', host='github')
+```
+
+Puts the presentation at <http://rjwalls.github.com/SlidifyTest>. Note that you need to setup your [Github SSH keys](https://help.github.com/articles/generating-ssh-keys).  
+
+Can also use Rpubs or Dropbox.
+
+--- .segue .dark
+
+## Where's the magic?
+
+---
+
+```yaml
+title       : Slidify 
+subtitle    : Presentations from R Markdown
+author      : Robert J. Walls
+job         : University of Massachusetts
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+biglogo     : robertsrobot.png
+logo        : umass.png
+```
+
+---
+
+## IO2012 
+
+The default slide framework is `io2012` from Google's 2012 I/O developer conference.
+
+Adds some nice presenter features
+ - Pressing 'p' toggles speaker notes (if they're on the current slide ((buggy)))
+ - Pressing 'f' toggles fullscreen viewing
+ - Pressing 'w' toggles widescreen
+ - Pressing 'o' toggles overview mode
+ - Pressing 'ESC' toggles off these goodies
+ 
+Append [`?presentme=true`](http://rjwalls.github.io/SlidifyTest/) to the presentation url to get the presenter view. Use [`?presentme=false`](http://rjwalls.github.io/SlidifyTest/) to disable presenter mode.
+
+---
+
+## Slide Metadata
+
+Slide level metadata are specified as key:value pairs. 
+Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and & respectively. 
+
+```
+--- &vcenter
+```
+
+```
+--- .segue .dark
+```
+
+```
+--- .segue .quote .dark, bg:url(allyourbase.jpg)
+```
+
+--- &vcenter
+
+```
+--- &vcenter
+```
+
+![Lime cat](limecat.jpg)
+
+Lime cat is important.
+
+--- .segue .dark
+
+```
+--- .segue .dark
+```
+
+## Segue Slide
+
+--- .segue .quote .dark, bg:url(allyourbase.jpg)
+
+```
+--- .segue .quote .dark, bg:url(allyourbase.jpg)
+```
+
+<q> All your base are belong to us. </q>
 
 --- &twocol
 
 ## Two Column Layout   
-### This slide *does not* have two columns
+### This slide *does not* have two columns, but it should.
 
 *** =left
     
@@ -257,12 +351,24 @@ Make sure to set `results='asis'`.
  1. point 4
  2. point 5
 
+
+--- .segue bg:url(successkid.jpg)
+
 ---
 
-## Useful Links
+## Verdict
+
+Quick and easy way to create presentations, *but* it's not quite ready to replace Keynote.
+
+Lacking:
+ - Animations
+ - Presenter View
+ - Spellcheck
+
+### Useful Links
  - [R Markdown Examples](https://gist.github.com/jeromyanglim/2716336)
- - [Slidify](http://slidify.org/)
+ - [Slidify Homepage](http://slidify.org/)
  - [I/O 2012 Template](https://code.google.com/p/io-2012-slides/)
- - [iquiz](http://slidify.github.io/iquiz/)
- - [Ramnath Vaidyanathan](https://github.com/ramnathv/)
+ - [iquiz: A quiz widget for slidify](http://slidify.github.io/iquiz/)
+ - [Ramnath Vaidyanathan's Github page](https://github.com/ramnathv/)
  
