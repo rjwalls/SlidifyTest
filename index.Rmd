@@ -18,13 +18,6 @@ logo        : umass.png
 
 *Slidify Philosophy*: Separate the content writing from the its rendering.
 
-
---- &vcenter
-
-Important centered text.
-
-![Lime cat](limecat.jpg)
-
 <div class='well'>
 <p><b> Note: </b> we can embed nodes using HTML (with the bootstrap widget)</p>
 </div>
@@ -36,9 +29,6 @@ I need to focus on the following
  - other key point
  - clever anecdote
  
-
-
-
 ---
 
 
@@ -169,12 +159,21 @@ Slide level metadata are specified as key:value pairs.
 Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and & respectively. 
 
 ```
+--- &vcenter
+```
+
+```
 --- .segue .dark
 ```
 
 ```
 --- .segue .quote .dark, bg:url(allyourbase.jpg)
 ```
+
+--- &vcenter
+
+![Lime cat](limecat.jpg)
+Lime cat is important.
 
 --- .segue .dark
 
