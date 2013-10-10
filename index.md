@@ -1,6 +1,6 @@
 ---
 title       : Slidify 
-subtitle    : Great Presentations using R Markdown
+subtitle    : Great(?) Presentations from R Markdown
 author      : Robert J. Walls
 job         : University of Massachusetts
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -8,7 +8,8 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
---- .seque .quote .dark
+
+--- .segue .quote .dark
 
 <q> Who doesn't like to start out a presentation with a quote? </q>
 
@@ -65,9 +66,9 @@ if __name__ == '__main__':
   hello()
 ```
 
---- .seque .dark
+--- .segue .dark
 
-## Seque ##
+## Segue Slide
 
 ---
 
@@ -83,14 +84,12 @@ install_github('slidifyLibraries', 'ramnathv')
 
 It is simple to create a new presentation.
 
-
 ```r
 library(slidify)
 
-# Create a new presentation called 'mydeck'
-author("mydeck")
+#Create a new presentation called 'mydeck'
+author('mydeck')
 ```
-
 
 Slidify does much of the setup work for you (including creating the github repo). 
 You just need to edit the `index.Rmd` file!
@@ -101,15 +100,13 @@ You just need to edit the `index.Rmd` file!
 
 When you are ready to share your handiwork.
 
-
 ```r
 # Generate the Deck
-slidify("index.Rmd")
+slidify('index.Rmd')
 
 # Publish it to github
-publish(user = "rjwalls", repo = "SlidifyTest", host = "github")
+publish(user='rjwalls', repo='SlidifyTest', host='github')
 ```
-
 
 Puts the presentation at <http://rjwalls.github.com/SlidifyTest>. Note that you need to setup your [Github SSH keys](https://help.github.com/articles/generating-ssh-keys).  
 
@@ -125,23 +122,18 @@ Separate the content writing from the its rendering.
 
 ## RMarkdown
 
-You can use all of the features you love in Rmarkdown including:
+### You can use all of the features you love in Rmarkdown including:
  - bullets
 
-As well as numbered lists:
+### As well as numbered lists:
  1. Thing 1
  2. Thing 2
  
-*Italicized* and **bold** font. Or maybe not...
-
----
-
-## IO2012
-
-Animated lists:
-> - Point 1
+### Animated lists:
+> - This is probably specific to IO2012
 > - Point 2
-> - Point 3
+ 
+*Italicized* and **bold** font. Or maybe not...
 
 ---
 
@@ -156,14 +148,59 @@ Bing      | Bang
 
 ---
 
+## IO2012 
+
+The default slide framework is `io2012` from Google's 2012 I/O developer conference.
+
+Adds some nice presenter features
+ - Pressing 'h' highlights code snippets
+ - Pressing 'p' toggles speaker notes (if they're on the current slide)
+ - Pressing 'f' toggles fullscreen viewing
+ - Pressing 'w' toggles widescreen
+ - Pressing 'o' toggles overview mode
+ - Pressing 'ESC' toggles off these goodies
+
+---
+
 ## Tables from a Data.frame
 
-price | carat | cut | clarity___ | ___ | ___ | ___326 | 0.23 | 5 | 2
+
+```r
+library(plyr)
+
+df <- diamonds[seq(1, 5), ]
+df <- with(df, cbind(price, carat, cut, clarity))
+
+# Make the header
+header <- paste(colnames(df), collapse = " | ")
+dashline <- paste(rep(c("---"), length(colnames(df))), collapse = " | ")
+
+# Add the data
+data <- aaply(df, 1, paste, collapse = " | ")
+```
+
+
+---
+
+## Tables from a Data.frame
+
+
+```r
+cat(header, dashline, data, sep = "\n")
+```
+
+price | carat | cut | clarity
+--- | --- | --- | ---
+326 | 0.23 | 5 | 2
 326 | 0.21 | 4 | 3
 327 | 0.23 | 2 | 5
 334 | 0.29 | 4 | 4
 335 | 0.31 | 2 | 2
 
+
+Make sure to set `results='asis'`.
+
+---
 
 --- bg:url(successkid.jpg)
 
@@ -175,6 +212,7 @@ price | carat | cut | clarity___ | ___ | ___ | ___326 | 0.23 | 5 | 2
 ## Useful Links
  - [R Markdown Examples](https://gist.github.com/jeromyanglim/2716336)
  - [Slidify](http://slidify.org/)
+ - [I/O 2012 Template](https://code.google.com/p/io-2012-slides/)
 
 ---
 
