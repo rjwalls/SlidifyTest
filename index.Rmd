@@ -127,7 +127,6 @@ As well as numbered lists:
  
 *Italicized* and **bold** font. Or maybe not...
 
-
 ---
 
 ## IO2012
@@ -148,10 +147,28 @@ Blah      | Blah
 Bing      | Bang
 
 
+---
+
+## Tables from a Data.frame
+
+```{r, results='asis', echo=FALSE}
+library(plyr)
+
+df <- diamonds[seq(1,5), ]
+df <- with(df, cbind(price, carat, cut, clarity))
+
+# Make the header
+cat(paste(colnames(df), collapse=' | '))
+cat(paste(rep(c('___'), length(colnames(df))), collapse=' | '))
+
+# Add the data
+data <-aaply(df, 1, paste, collapse=' | ')
+cat(data, sep='\n')
+```
+
 --- bg:url(successkid.jpg)
 
-# Image test 
-
+## Slide with a Background Image 
 
 ---
 
@@ -159,14 +176,6 @@ Bing      | Bang
 ## Useful Links
  - [R Markdown Examples](https://gist.github.com/jeromyanglim/2716336)
  - [Slidify](http://slidify.org/)
-
----
-
-## Adding existing R files
-
-```{r results='hide'}
-knit('figure1.Rmd')
-```
 
 ---
 

@@ -134,7 +134,6 @@ As well as numbered lists:
  
 *Italicized* and **bold** font. Or maybe not...
 
-
 ---
 
 ## IO2012
@@ -155,10 +154,20 @@ Blah      | Blah
 Bing      | Bang
 
 
+---
+
+## Tables from a Data.frame
+
+price | carat | cut | clarity___ | ___ | ___ | ___326 | 0.23 | 5 | 2
+326 | 0.21 | 4 | 3
+327 | 0.23 | 2 | 5
+334 | 0.29 | 4 | 4
+335 | 0.31 | 2 | 2
+
+
 --- bg:url(successkid.jpg)
 
-# Image test 
-
+## Slide with a Background Image 
 
 ---
 
@@ -166,24 +175,6 @@ Bing      | Bang
 ## Useful Links
  - [R Markdown Examples](https://gist.github.com/jeromyanglim/2716336)
  - [Slidify](http://slidify.org/)
-
----
-
-## Adding existing R files
-
-
-```r
-knit("figure1.Rmd")
-```
-
-```
-## 
-## 
-## processing file: figure1.Rmd output file: figure1.md
-```
-
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
-
 
 ---
 
