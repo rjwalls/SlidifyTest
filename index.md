@@ -9,7 +9,7 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 
---- .segue .quote .dark bg:url(allyourbase.jpg)
+--- .segue .quote .dark, bg:url(allyourbase.jpg)
 
 <q> All your base are belong to us. </q>
 
@@ -170,6 +170,8 @@ Adds some nice presenter features
  - Pressing 'w' toggles widescreen
  - Pressing 'o' toggles overview mode
  - Pressing 'ESC' toggles off these goodies
+ 
+Append [`?presentme=true`](http://rjwalls.github.io/SlidifyTest/) to the presentation url to get the presenter view.
 
 ---
 
