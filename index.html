@@ -43,7 +43,7 @@
       </aside>
       <hgroup class="auto-fadein">
         <h1>Slidify</h1>
-        <h2>Great(?) Presentations from R Markdown</h2>
+        <h2>Presentations from R Markdown</h2>
         <p>Robert J. Walls<br/>University of Massachusetts</p>
       </hgroup>
           </slide>
@@ -142,10 +142,20 @@ ggplot(diamonds, aes(carat, price)) + geom_hex()
     <h2>Equations</h2>
   </hgroup>
   <article>
-    <p>The Arithmetic mean is equal to \(\frac{1}{n} \sum_{i=i}^{n} x_{i}\), or the summation
+    <p>Write equations just like you would in LaTeX.</p>
+
+<p>The Arithmetic mean is equal to \(\frac{1}{n} \sum_{i=i}^{n} x_{i}\), or the summation
 of n numbers divided by n.</p>
 
 <p>\[ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} \]</p>
+
+<pre><code>$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+</code></pre>
+
+<p>In the starting YAML, make sure to include </p>
+
+<pre><code>widgets : [mathjax]
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -461,6 +471,20 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
 <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
 <!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
 <!-- LOAD HIGHLIGHTER JS FILES -->
 <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

@@ -1,12 +1,12 @@
 ---
 title       : Slidify 
-subtitle    : Great(?) Presentations from R Markdown
+subtitle    : Presentations from R Markdown
 author      : Robert J. Walls
 job         : University of Massachusetts
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 biglogo     : robertsrobot.png
 logo        : umass.png
@@ -72,10 +72,21 @@ Use `echo=FALSE` to hide the code block on your slide.
 ---
 
 ## Equations
+Write equations just like you would in LaTeX.
+
 The Arithmetic mean is equal to $\frac{1}{n} \sum_{i=i}^{n} x_{i}$, or the summation
 of n numbers divided by n.
 
 $$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+
+```
+$$ H(X)=-\sum_{i}{P(x_i) log_b P(x_i)} $$
+```
+In the starting YAML, make sure to include 
+
+```
+widgets : [mathjax]
+```
 
 ---
 
