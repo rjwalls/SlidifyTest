@@ -9,9 +9,9 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 
---- .segue .quote .dark
+--- .segue .quote .dark bg:url(allyourbase.jpg)
 
-<q> Who doesn't like to start out a presentation with a quote? </q>
+<q> All your base are belong to us. </q>
 
 --- bg: yellow
 
@@ -24,12 +24,17 @@ Slide 2 text
 
 Hello thar.
 
+
+
 *** pnotes
 
 I need to focus on the following
  - key point
  - other key point
  - clever anecdote
+ 
+![Lime cat](limecat.jpg)
+
 
 ---
 
