@@ -145,7 +145,7 @@ Can also use Rpubs or Dropbox.
 > - This is probably specific to IO2012
 > - Point 2
  
-*Italicized* and **bold** font. Or maybe not...
+*Italicized* and **bold** font.
 
 ---
 
@@ -230,7 +230,7 @@ Make sure to set `results='asis'`.
 --- &twocol
 
 ## Two Column Layout   
-### This slide has two columns
+### This slide *does not* have two columns
 
 *** =left
     
