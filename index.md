@@ -6,7 +6,7 @@ job         : University of Massachusetts
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [mathjax, quiz, bootstrap]     # {mathjax, quiz, bootstrap}
+widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 biglogo     : robertsrobot.png
 logo        : umass.png
@@ -257,28 +257,6 @@ Make sure to set `results='asis'`.
 
 ## Slide with a Background Image 
 
----  &radio
-
-## Radio
-
-Eleanor scores 680 on the Mathematics part of the SAT. The distribution of SAT scores in a reference population is Normal, with mean 500 and standard deviation 100. Gerald takes the American College Testing (ACT) Mathematics test and scores 27. ACT scores are Normally distributed with mean 18 and standard deviation 6. Assuming that both tests measure the same kind of ability, who did better?
-
-1. _Eleanor_
-2. Gerald
-
-<div class='well'>
-<p><b> Example from http://slidify.github.io/iquiz/</p>
-</div>
-
-*** .explanation
-
-The best way to compare their performance is to calculate their standardized scores.
-
-$$z_E = \frac{680 - 500}{100} = 1.8$$
-$$z_G = \frac{27 - 18}{6} = 1.5$$
-
-Since, Eleanor has a higher standardized score, we can conclude that Eleanor did better!
-
 ---
 
 ## Useful Links
@@ -286,3 +264,5 @@ Since, Eleanor has a higher standardized score, we can conclude that Eleanor did
  - [Slidify](http://slidify.org/)
  - [I/O 2012 Template](https://code.google.com/p/io-2012-slides/)
  - [iquiz](http://slidify.github.io/iquiz/)
+ - [Ramnath Vaidyanathan](https://github.com/ramnathv/)
+ 
