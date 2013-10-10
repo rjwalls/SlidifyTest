@@ -13,7 +13,26 @@ mode        : selfcontained # {standalone, draft}
 
 <q> All your base are belong to us. </q>
 
---- bg: yellow
+--- &vcenter
+
+Some centered text?
+
+--- &twocol w1:40% w2:60%
+
+### Two Column Layout   
+This slide has two columns
+
+*** {name: left}
+    
+- point 1
+- point 2
+- point 3
+
+*** {name: right}
+
+![Lime cat](limecat.jpg)
+
+---
 
 ## Simple Code Blocks
 
@@ -33,7 +52,7 @@ I need to focus on the following
  - other key point
  - clever anecdote
  
-![Lime cat](limecat.jpg)
+
 
 
 ---
