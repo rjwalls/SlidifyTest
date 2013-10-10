@@ -6,45 +6,37 @@ job         : University of Massachusetts
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
+widgets     : [mathjax, quiz, bootstrap]     # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 biglogo     : robertsrobot.png
 logo        : umass.png
---- .segue .quote .dark, bg:url(allyourbase.jpg)
-
-<q> All your base are belong to us. </q>
-
 --- &vcenter
 
-#Important centered text.
+Important centered text.
 
---- &twocol w1:40% w2:60%
+--- &twocol
 
-### Two Column Layout   
-This slide has two columns
+## Two Column Layout   
+### This slide has two columns
 
-*** {name: left}
+*** =left
     
 - point 1
 - point 2
 - point 3
 
-*** {name: right}
+*** =right
 
 ![Lime cat](limecat.jpg)
 
 ---
 
-## Simple Code Blocks
-
-Slide 2 text
- - bullet?
- 
-### Another title?
-
-Hello thar.
+## Title!
 
 
+<div class='well'>
+<p><b> Note: </b> we can embed nodes using HTML</p>
+</div>
 
 *** pnotes
 
@@ -93,7 +85,7 @@ widgets : [mathjax]
 
 ---
 
-## Python!
+## Syntax Highlighting
 
 Use fenced code blocks to render Python code with syntax highlighting.
 
@@ -107,10 +99,6 @@ def hello():
 if __name__ == '__main__':
   hello()
 ```
-
---- .segue .dark
-
-## Segue Slide
 
 ---
 
@@ -162,7 +150,7 @@ Separate the content writing from the its rendering.
 
 ---
 
-## RMarkdown
+## R Markdown
 
 ### You can use all of the features you love in Rmarkdown including:
  - bullets
@@ -179,17 +167,6 @@ Separate the content writing from the its rendering.
 
 ---
 
-## Tables
-
-Column 1  | Column 2
-----------|---------
-Foo       | Bar
-Blah      | Blah
-Bing      | Bang
-
-
----
-
 ## IO2012 
 
 The default slide framework is `io2012` from Google's 2012 I/O developer conference.
@@ -203,6 +180,38 @@ Adds some nice presenter features
  - Pressing 'ESC' toggles off these goodies
  
 Append [`?presentme=true`](http://rjwalls.github.io/SlidifyTest/) to the presentation url to get the presenter view. Use [`?presentme=false`](http://rjwalls.github.io/SlidifyTest/) to disable presenter mode.
+
+---
+
+Slide level metadata are specified as key:value pairs. 
+Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and & respectively. 
+
+```
+--- .segue .dark
+```
+
+```
+--- .segue .quote .dark, bg:url(allyourbase.jpg)
+```
+
+--- .segue .dark
+
+## Segue Slide
+
+--- .segue .quote .dark, bg:url(allyourbase.jpg)
+
+<q> All your base are belong to us. </q>
+
+---
+
+## Tables
+
+Column 1  | Column 2
+----------|---------
+Foo       | Bar
+Blah      | Blah
+Bing      | Bang
+
 
 ---
 
@@ -244,20 +253,36 @@ price | carat | cut | clarity
 
 Make sure to set `results='asis'`.
 
----
-
 --- bg:url(successkid.jpg)
 
 ## Slide with a Background Image 
 
----
+---  &radio
 
+## Radio
+
+Eleanor scores 680 on the Mathematics part of the SAT. The distribution of SAT scores in a reference population is Normal, with mean 500 and standard deviation 100. Gerald takes the American College Testing (ACT) Mathematics test and scores 27. ACT scores are Normally distributed with mean 18 and standard deviation 6. Assuming that both tests measure the same kind of ability, who did better?
+
+1. _Eleanor_
+2. Gerald
+
+<div class='well'>
+<p><b> Example from http://slidify.github.io/iquiz/</p>
+</div>
+
+*** .explanation
+
+The best way to compare their performance is to calculate their standardized scores.
+
+$$z_E = \frac{680 - 500}{100} = 1.8$$
+$$z_G = \frac{27 - 18}{6} = 1.5$$
+
+Since, Eleanor has a higher standardized score, we can conclude that Eleanor did better!
+
+---
 
 ## Useful Links
  - [R Markdown Examples](https://gist.github.com/jeromyanglim/2716336)
  - [Slidify](http://slidify.org/)
  - [I/O 2012 Template](https://code.google.com/p/io-2012-slides/)
-
----
-
-
+ - [iquiz](http://slidify.github.io/iquiz/)

@@ -18,7 +18,10 @@
     src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
   </script>
   
-    <link rel="stylesheet" href = "assets/css/ribbons.css">
+    <link rel="stylesheet" href = "libraries/widgets/quiz/css/jquery-quiz.css">
+<link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href = "assets/css/ribbons.css">
 
 </head>
 <body style="opacity: 0">
@@ -49,33 +52,22 @@
           </slide>
 
     <!-- SLIDES -->
-      <slide class="segue quote dark," id="slide-1" style="background:url(allyourbase.jpg);">
-  <hgroup>
-    
-  </hgroup>
-  <article>
-    <p><q> All your base are belong to us. </q></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-2">
+      <slide class="" id="slide-1">
 <hgroup>
   
 </hgroup>
 <article class = 'flexbox vcenter'>
-<p>#Important centered text.</p>
+<p>Important centered text.</p>
 
 </article>
 <!-- Presenter Notes -->
 </slide>
-      <slide class="" id="slide-3" style="background:;">
+      <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h3>Two Column Layout</h3>
+    <h2>Two Column Layout</h2>
   </hgroup>
   <article>
-    <p>This slide has two columns</p>
+    <h3>This slide has two columns</h3>
 
 
 <div style='float:left;width:48%;' class='centered'>
@@ -88,20 +80,14 @@
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-4" style="background:;">
+      <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Simple Code Blocks</h2>
+    <h2>Title!</h2>
   </hgroup>
   <article>
-    <p>Slide 2 text</p>
-
-<ul>
-<li>bullet?</li>
-</ul>
-
-<h3>Another title?</h3>
-
-<p>Hello thar.</p>
+    <div class='well'>
+<p><b> Note: </b> we can embed nodes using HTML</p>
+</div>
 
 
   </article>
@@ -120,7 +106,7 @@
   </aside>
 </slide>
 
-      <slide class="" id="slide-5" style="background:;">
+      <slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>Using ggplot</h2>
   </hgroup>
@@ -137,7 +123,7 @@ ggplot(diamonds, aes(carat, price)) + geom_hex()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-6" style="background:;">
+      <slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Equations</h2>
   </hgroup>
@@ -161,9 +147,9 @@ of n numbers divided by n.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-7" style="background:;">
+      <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Python!</h2>
+    <h2>Syntax Highlighting</h2>
   </hgroup>
   <article>
     <p>Use fenced code blocks to render Python code with syntax highlighting.</p>
@@ -182,17 +168,7 @@ if __name__ == &#39;__main__&#39;:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="segue dark" id="slide-8" style="background:;">
-  <hgroup>
-    <h2>Segue Slide</h2>
-  </hgroup>
-  <article>
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-9" style="background:;">
+      <slide class="" id="slide-7" style="background:;">
   <hgroup>
     <h2>Getting Started with Slidify</h2>
   </hgroup>
@@ -219,7 +195,7 @@ You just need to edit the <code>index.Rmd</code> file!</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-10" style="background:;">
+      <slide class="" id="slide-8" style="background:;">
   <hgroup>
     <h2>Publishing your Presentation</h2>
   </hgroup>
@@ -241,7 +217,7 @@ publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-11" style="background:;">
+      <slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Slidify Philosophy</h2>
   </hgroup>
@@ -252,9 +228,9 @@ publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-12" style="background:;">
+      <slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>RMarkdown</h2>
+    <h2>R Markdown</h2>
   </hgroup>
   <article>
     <h3>You can use all of the features you love in Rmarkdown including:</h3>
@@ -283,7 +259,70 @@ publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-13" style="background:;">
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>IO2012</h2>
+  </hgroup>
+  <article>
+    <p>The default slide framework is <code>io2012</code> from Google&#39;s 2012 I/O developer conference.</p>
+
+<p>Adds some nice presenter features</p>
+
+<ul>
+<li>Pressing &#39;h&#39; highlights code snippets</li>
+<li>Pressing &#39;p&#39; toggles speaker notes (if they&#39;re on the current slide)</li>
+<li>Pressing &#39;f&#39; toggles fullscreen viewing</li>
+<li>Pressing &#39;w&#39; toggles widescreen</li>
+<li>Pressing &#39;o&#39; toggles overview mode</li>
+<li>Pressing &#39;ESC&#39; toggles off these goodies</li>
+</ul>
+
+<p>Append <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=true</code></a> to the presentation url to get the presenter view. Use <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=false</code></a> to disable presenter mode.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <p>Slide level metadata are specified as key:value pairs. 
+Commonly specified metadata like id, class and layout can also be identified by prefixing with punctuation marks #, . and &amp; respectively. </p>
+
+<pre><code>--- .segue .dark
+</code></pre>
+
+<pre><code>--- .segue .quote .dark, bg:url(allyourbase.jpg)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue dark" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Segue Slide</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue quote dark," id="slide-14" style="background:url(allyourbase.jpg);">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <p><q> All your base are belong to us. </q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>Tables</h2>
   </hgroup>
@@ -312,31 +351,7 @@ publish(user=&#39;rjwalls&#39;, repo=&#39;SlidifyTest&#39;, host=&#39;github&#39
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-14" style="background:;">
-  <hgroup>
-    <h2>IO2012</h2>
-  </hgroup>
-  <article>
-    <p>The default slide framework is <code>io2012</code> from Google&#39;s 2012 I/O developer conference.</p>
-
-<p>Adds some nice presenter features</p>
-
-<ul>
-<li>Pressing &#39;h&#39; highlights code snippets</li>
-<li>Pressing &#39;p&#39; toggles speaker notes (if they&#39;re on the current slide)</li>
-<li>Pressing &#39;f&#39; toggles fullscreen viewing</li>
-<li>Pressing &#39;w&#39; toggles widescreen</li>
-<li>Pressing &#39;o&#39; toggles overview mode</li>
-<li>Pressing &#39;ESC&#39; toggles off these goodies</li>
-</ul>
-
-<p>Append <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=true</code></a> to the presentation url to get the presenter view. Use <a href="http://rjwalls.github.io/SlidifyTest/"><code>?presentme=false</code></a> to disable presenter mode.</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-15" style="background:;">
+      <slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Tables from a Data.frame</h2>
   </hgroup>
@@ -358,7 +373,7 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-16" style="background:;">
+      <slide class="" id="slide-17" style="background:;">
   <hgroup>
     <h2>Tables from a Data.frame</h2>
   </hgroup>
@@ -412,16 +427,6 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-17" style="background:;">
-  <hgroup>
-    
-  </hgroup>
-  <article>
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
       <slide class="" id="slide-18" style="background:url(successkid.jpg);">
   <hgroup>
     <h2>Slide with a Background Image</h2>
@@ -434,6 +439,44 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
 
       <slide class="" id="slide-19" style="background:;">
   <hgroup>
+    <h2>Radio</h2>
+  </hgroup>
+  <article>
+    
+<div class="quiz-single well new">
+  <p>Eleanor scores 680 on the Mathematics part of the SAT. The distribution of SAT scores in a reference population is Normal, with mean 500 and standard deviation 100. Gerald takes the American College Testing (ACT) Mathematics test and scores 27. ACT scores are Normally distributed with mean 18 and standard deviation 6. Assuming that both tests measure the same kind of ability, who did better?</p>
+
+<ol>
+<li><em>Eleanor</em></li>
+<li>Gerald</li>
+</ol>
+
+<div class='well'>
+<p><b> Example from http://slidify.github.io/iquiz/</p>
+</div>
+
+
+  
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  
+  <div class="quiz-hint">
+    
+  </div>
+  
+  <div class="quiz-explanation">
+    
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-20" style="background:;">
+  <hgroup>
     <h2>Useful Links</h2>
   </hgroup>
   <article>
@@ -441,18 +484,9 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
 <li><a href="https://gist.github.com/jeromyanglim/2716336">R Markdown Examples</a></li>
 <li><a href="http://slidify.org/">Slidify</a></li>
 <li><a href="https://code.google.com/p/io-2012-slides/">I/O 2012 Template</a></li>
+<li><a href="http://slidify.github.io/iquiz/">iquiz</a></li>
 </ul>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-20" style="background:;">
-  <hgroup>
-    
-  </hgroup>
-  <article>
-    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -485,6 +519,23 @@ data &lt;- aaply(df, 1, paste, collapse = &quot; | &quot;)
 </script> -->
 <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
 </script>
+<script src='libraries/widgets/quiz/js/jquery.quiz.js'></script>
+<script src='libraries/widgets/quiz/js/mustache.min.js'></script>
+<script type="text/javascript">
+ $('.quiz').find('li:has(em)').addClass('quiz-answer')
+ $('li.quiz-answer em').replaceWith(function(){
+   return $(this).contents()
+ })
+ $('.quiz').find('li').addClass('quiz-option')
+ $.quiz();
+</script>
+<script src='libraries/widgets/bootstrap/js/bootstrap.min.js'></script>
+<script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});  
+</script>  
 <!-- LOAD HIGHLIGHTER JS FILES -->
 <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
