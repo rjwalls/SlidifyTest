@@ -10,6 +10,9 @@ widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 biglogo     : robertsrobot.png
 logo        : umass.png
+--- .segue bg:url(successkid.jpg)
+
+
 ---
 
 ## Slidify
