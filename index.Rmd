@@ -10,8 +10,6 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 --- .seque .quote .dark
 
-
-
 <q> Who doesn't like to start out a presentation with a quote? </q>
 
 --- .class #id 
@@ -150,9 +148,10 @@ Blah      | Blah
 Bing      | Bang
 
 
---- #kittenwar
+--- bg:url(successkid.jpg)
 
-<iframe src = 'http://dillinger.io' height='600px'></iframe>
+# Image test 
+
 
 ---
 
