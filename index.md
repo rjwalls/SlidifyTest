@@ -8,14 +8,15 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
-
+biglogo     : robertsrobot.png
+logo        : umass.png
 --- .segue .quote .dark, bg:url(allyourbase.jpg)
 
 <q> All your base are belong to us. </q>
 
 --- &vcenter
 
-Some centered text?
+#Important centered text.
 
 --- &twocol w1:40% w2:60%
 
@@ -190,7 +191,7 @@ Adds some nice presenter features
  - Pressing 'o' toggles overview mode
  - Pressing 'ESC' toggles off these goodies
  
-Append [`?presentme=true`](http://rjwalls.github.io/SlidifyTest/) to the presentation url to get the presenter view.
+Append [`?presentme=true`](http://rjwalls.github.io/SlidifyTest/) to the presentation url to get the presenter view. Use [`?presentme=false`](http://rjwalls.github.io/SlidifyTest/) to disable presenter mode.
 
 ---
 
