@@ -13,7 +13,7 @@ mode        : selfcontained # {standalone, draft}
 
 <q> Who doesn't like to start out a presentation with a quote? </q>
 
---- .class #id 
+--- bg: yellow
 
 ## Simple Code Blocks
 
@@ -24,6 +24,12 @@ Slide 2 text
 
 Hello thar.
 
+*** pnotes
+
+I need to focus on the following
+ - key point
+ - other key point
+ - clever anecdote
 
 ---
 
