@@ -10,32 +10,23 @@ widgets     : [mathjax, bootstrap]     # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 biglogo     : robertsrobot.png
 logo        : umass.png
+---
+
+## Slidify
+
+### An R package for Creating slides from R Markdown.
+
+*Slidify Philosophy*: Separate the content writing from the its rendering.
+
+
 --- &vcenter
 
 Important centered text.
 
---- &twocol
-
-## Two Column Layout   
-### This slide has two columns
-
-*** =left
-    
-- point 1
-- point 2
-- point 3
-
-*** =right
-
 ![Lime cat](limecat.jpg)
 
----
-
-## Title!
-
-
 <div class='well'>
-<p><b> Note: </b> we can embed nodes using HTML</p>
+<p><b> Note: </b> we can embed nodes using HTML (with the bootstrap widget)</p>
 </div>
 
 *** pnotes
@@ -141,12 +132,6 @@ Can also use Rpubs or Dropbox.
 
 ---
 
-## Slidify Philosophy
-
-Separate the content writing from the its rendering.
-
----
-
 ## R Markdown
 
 ### You can use all of the features you love in Rmarkdown including:
@@ -241,6 +226,22 @@ Make sure to set `results='asis'`.
 --- bg:url(successkid.jpg)
 
 ## Slide with a Background Image 
+
+--- &twocol
+
+## Two Column Layout   
+### This slide has two columns
+
+*** =left
+    
+ - point 1
+ - point 2
+ - point 3
+
+*** =right
+
+ 1. point 4
+ 2. point 5
 
 ---
 
